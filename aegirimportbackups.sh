@@ -6,8 +6,8 @@
 # the TMPFOLDER should contain backups from your previous aegir install
 
 
-_TMPFOLDER="/data/disk/host/tmp/migrate" #Absolute path to directory where you backups are located, No backslash at the end
-_INSTPROFILE="stsbase" #if none, use the word: default
+_TMPFOLDER="/var/aegir/tmp/migrate" #Absolute path to directory where you backups are located, No backslash at the end
+_INSTPROFILE="default" #if none, use the word: default
 _PLATFORM="@platform_STSBase62014p" #include @ before it
 _BACKUPYEAR="2011"
 
