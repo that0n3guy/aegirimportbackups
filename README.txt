@@ -1,7 +1,7 @@
 Description
 ----------------------------------
-This script allows you to mass import site backups created from an Aegir install.
-
+This script allows you to mass import site backups created from an Aegir install.  It basically does this: 
+http://community.aegirproject.org/node/117
 
 How it works
 --------------------------
@@ -11,7 +11,9 @@ This script will migrate any tar.gz file that is located in the migrate directoy
 
 How to use it
 -------------------
-Edit the script and change the variables:
+1. Copy yoru backup files to your migrate directory (probably /var/aegir/tmp/migrate)
+
+2. Edit the script and change the variables:
 
 _TMPFOLDER - This is where all your backup.tar.gz files are located.  This needs to be an absolute value
  without a traliing backslash.  Example" "/var/aegir/tmp/migrate"
@@ -24,3 +26,14 @@ _PLATFORM-  use the command "drush sa | grep platform" to see what platforms are
  include @ before it
 
 _BACKUPYEAR - This is just what year the backups where created int.  Example:"2011"
+
+
+3. Run the script.
+
+NOTE: Run it AS YOUR AEGIR USER
+
+su -s /bin/bash aegir #switching to your aegir user
+bash aegirimportbaskups.sh #run the script
+
+
+4. Verify the platform you imported all the backups to inside the Aegir web UI
