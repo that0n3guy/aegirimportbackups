@@ -11,7 +11,7 @@ This script will migrate any tar.gz file that is located in the migrate directoy
 
 How to use it
 -------------------
-1. Copy yoru backup files to your migrate directory (probably /var/aegir/tmp/migrate)
+1. Copy your backup files to your migrate directory (probably /var/aegir/tmp/migrate)
 
 2. Edit the script and change the variables:
 
@@ -37,3 +37,8 @@ bash aegirimportbaskups.sh #run the script
 
 
 4. Verify the platform you imported all the backups to inside the Aegir web UI
+
+
+NOTES
+-----------------------
+If your using this with Octopus (https://github.com/omega8cc/nginx-for-drupal), your going to want to put the backup files in your octopus users directory and not in /var/aegir/.  So if your octopus user is o1, your tmp directory will probably be "/data/disk/o1/tmp/migrate" and you will need to change the top of the script (step 2 above) to reflect that.  You will also want to run the script with your o1 user instead of your aegir user.
